@@ -1,6 +1,5 @@
 .envrc
 .terraform
-terraform.tfstate
-terraform.tfstate.backup
-.terraform.lock.hcl
+terraform.tfstate*
+.terraform.*
 /.idea
