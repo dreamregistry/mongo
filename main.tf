@@ -31,12 +31,12 @@ resource "docker_container" "mongo" {
   }
 }
 
-output "mongo_url" {
-  sensitive = true
-  value     = "mongodb://localhost:${docker_container.mongo.ports[0].external}/${random_pet.dbname.id}"
+output "MONGO_URL" {
+  sensitive   = true
+  value       = "mongodb://localhost:${docker_container.mongo.ports[0].external}/${random_pet.dbname.id}"
 }
 
-output "mongo_dbname" {
-  sensitive = true
-  value     = random_pet.dbname.id
+output "MONGO_DBNAME" {
+  sensitive   = true
+  value       = random_pet.dbname.id
 }
